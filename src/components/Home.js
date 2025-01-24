@@ -4,7 +4,8 @@ import { motion } from 'framer-motion';
 import { buttonVariants } from './Motions';
 
 
-const Home = () => {
+const Home = ({ setShowModal }) => {
+  setShowModal(false)
   return (
     <motion.div className="home container"
       initial={{ opacity: 0 }}

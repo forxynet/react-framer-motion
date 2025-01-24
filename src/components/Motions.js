@@ -13,6 +13,10 @@ const containerVariants = {
       when: "beforeChildren",
       staggerChildren: 0.4
     }
+  },
+  exit: {
+    x: '-100vw',
+    transition: { easeInOut: 'ease' }
   }
 }
 
@@ -50,4 +54,21 @@ const buttonVariants = {
   }
 }
 
-export { containerVariants, nextVariants, childVariants, buttonVariants }
+const backdrop = {
+  visible: { opacity: 1 },
+  hidden: { opacity: 0 }
+}
+
+const modal = {
+  hidden: {
+    y: "-100vh",
+    opacity: 0
+  },
+  visible: {
+    y: "200px",
+    opacity: 1,
+    transition: { delay: 0.5 }
+  }
+}
+
+export { containerVariants, nextVariants, childVariants, buttonVariants, backdrop, modal }
