@@ -71,4 +71,36 @@ const modal = {
   }
 }
 
-export { containerVariants, nextVariants, childVariants, buttonVariants, backdrop, modal }
+const svcVariants = {
+  hidden: { rotate: -180 },
+  visible: {
+    rotate: 0,
+    transition: { duration: 1 }
+  }
+}
+
+const pathVariants = {
+  hidden: {
+    opacity: 0,
+    pathLength: 0
+  },
+  visible: {
+    opacity: 1,
+    pathLength: 1,
+    transition: {
+      duration: 2,
+      ease: "easeInOut"
+    }
+  }
+}
+
+export {
+  containerVariants,
+  nextVariants,
+  childVariants,
+  buttonVariants,
+  backdrop,
+  modal,
+  svcVariants,
+  pathVariants
+}
