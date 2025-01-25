@@ -94,6 +94,38 @@ const pathVariants = {
   }
 }
 
+const loaderVariants = {
+  animationOne: {
+    x: [-20, 20],
+    y: [0, -30],
+    transition: {
+      x: {
+        repeat: Infinity,
+        duration: 1,
+      },
+      y: {
+        repeat: Infinity,
+        duration: 1,
+        ease: "easeOut"
+      }
+    }
+  },
+  animationTwo: {
+    y: [0, -40],
+    x: 0,
+    transition: {
+
+      y: {
+        repeat: Infinity,
+        duration: 1,
+        ease: 'easeOut'
+      }
+    }
+  }
+};
+
+
+
 export {
   containerVariants,
   nextVariants,
@@ -102,5 +134,6 @@ export {
   backdrop,
   modal,
   svcVariants,
-  pathVariants
+  pathVariants,
+  loaderVariants
 }
